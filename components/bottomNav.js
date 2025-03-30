@@ -1,16 +1,13 @@
 'use client';
 
-import { Home, Wallet, Ticket, Bell, User, Bus } from 'lucide-react';
+import { Home, Bus } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 
 const navigation = [
   { name: 'Home', href: '/home', icon: Home },
-  { name: 'bus', href: '/bus', icon: Bus },
-//   { name: 'Ticket', href: '/ticket', icon: Ticket },
-//   { name: 'Notification', href: '/notification', icon: Bell },
-//   { name: 'Profile', href: '/profile', icon: User },
+  { name: 'Bus', href: '/bus', icon: Bus },
 ];
 
 export function BottomNav() {
@@ -29,18 +26,11 @@ export function BottomNav() {
               href={item.href}
               className={cn(
                 'flex flex-col items-center justify-center w-full h-full',
-                'text-sm font-medium transition-colors',
-                isActive
-                  ? 'text-blue-600'
-                  : 'text-gray-500 hover:text-gray-900'
+                'text-sm font-medium',
+                isActive ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
               )}
             >
-              <Icon
-                className={cn(
-                  'h-6 w-6 mb-1',
-                  isActive ? 'stroke-blue-600' : 'stroke-current'
-                )}
-              />
+              <Icon className={cn('h-6 w-6 mb-1')} />
               <span className="text-xs">{item.name}</span>
             </Link>
           );
