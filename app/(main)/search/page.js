@@ -1,13 +1,19 @@
+"use client"
 import BusCard from '@/components/bus-card';
 import Header from '@/components/header';
-import Service from '@/components/services';
-import React from 'react';
+import React, { useState } from 'react';
 
 const Search = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+  };
+
   return (
     <div className='m-5'>
-      <Header/>
-      <BusCard/>
+      <Header onSearch={handleSearch} />
+      <BusCard searchQuery={searchQuery} />
     </div>
   );
 }
