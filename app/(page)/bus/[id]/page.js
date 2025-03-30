@@ -22,7 +22,7 @@ const BusDetail = ({params}) => {
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Header */}
-      <div className='bg-blue-600 w-full h-20 flex flex-row justify-between align-middle p-5'>
+      <div className='fixed top-0 left-0 right-0 z-50 bg-blue-600 w-full h-20 flex flex-row justify-between align-middle p-5'>
         <div 
           className='self-center cursor-pointer hover:opacity-75'
           onClick={() => router.back()}
@@ -41,7 +41,7 @@ const BusDetail = ({params}) => {
       </div>
 
       {/* Bus Stops Timeline */}
-      <div className='m-5'>
+      <div className='mx-5 mt-25'>
         <h3 className="text-lg font-semibold mb-4">Bus Stops</h3>
         <div className="relative">
           {/* Vertical Line */}
