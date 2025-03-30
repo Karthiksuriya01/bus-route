@@ -1,6 +1,6 @@
 "use client"
 import BusCard from '@/components/bus-card';
-import Header from '@/components/header';
+import SearchBus from '@/components/search';
 import React, { useState } from 'react';
 
 const Search = () => {
@@ -12,7 +12,7 @@ const Search = () => {
 
   return (
     <div className='m-5'>
-      <Header onSearch={handleSearch} />
+      <SearchBus onSearch={handleSearch} />
       <BusCard searchQuery={searchQuery} />
     </div>
   );

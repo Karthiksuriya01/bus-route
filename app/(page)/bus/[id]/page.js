@@ -3,7 +3,7 @@
 import React from 'react';
 import busdata from '@/data/dummy'; 
 import rootes from '@/data/routes'; 
-import { LucideArrowLeft, LucideArrowRight, Router, Search } from 'lucide-react';
+import { LucideArrowLeft, LucideArrowRight, Search } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
 const BusDetail = ({params}) => {
