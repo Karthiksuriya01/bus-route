@@ -1,16 +1,16 @@
 'use client';
 
-import { Home, Wallet, Ticket, Bell, User } from 'lucide-react';
+import { Home, Wallet, Ticket, Bell, User, Bus } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 
 const navigation = [
   { name: 'Home', href: '/home', icon: Home },
-  { name: 'Wallet', href: '/wallet', icon: Wallet },
-  { name: 'Ticket', href: '/ticket', icon: Ticket },
-  { name: 'Notification', href: '/notification', icon: Bell },
-  { name: 'Profile', href: '/profile', icon: User },
+  { name: 'bus', href: '/bus', icon: Bus },
+//   { name: 'Ticket', href: '/ticket', icon: Ticket },
+//   { name: 'Notification', href: '/notification', icon: Bell },
+//   { name: 'Profile', href: '/profile', icon: User },
 ];
 
 export function BottomNav() {
