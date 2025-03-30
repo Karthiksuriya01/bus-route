@@ -1,13 +1,15 @@
 'use client';
 
-import { Home, Bus } from 'lucide-react';
+import { Home, Bus, Search } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 
 const navigation = [
   { name: 'Home', href: '/home', icon: Home },
-  { name: 'Bus', href: '/bus', icon: Bus },
+  { name: 'Search' , href: '/search', icon:Search },
+  { name: 'Bus', href: '/bus', icon: Bus }
+  
 ];
 
 export function BottomNav() {
