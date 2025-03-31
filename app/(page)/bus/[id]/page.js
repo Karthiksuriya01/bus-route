@@ -41,14 +41,14 @@ const BusDetail = ({params}) => {
       </div>
 
       {/* Bus Stops Timeline */}
-      <div className='mx-5 mt-25'>
+      <div className='mx-5 mt-20'>
         <h3 className="text-lg font-semibold mb-4">Bus Stops</h3>
         <div className="relative">
           {/* Vertical Line */}
-          <div className="absolute left-2 top-0 w-0.5 h-full bg-gray-300 -z-10" />
+          <div className="absolute left-2 top-0 w-1 h-full bg-blue-700 z-10" />
           
           {/* Stops */}
-          <div className="space-y-8">
+          <div className="space-y-8 mx-0.5">
             {bus.stops.map((stopId, index) => {
               const stop = rootes.find(route => route.ID === stopId);
               const isFirst = index === 0;
