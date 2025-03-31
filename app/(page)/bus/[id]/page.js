@@ -3,7 +3,7 @@
 import React from 'react';
 import busdata from '@/data/dummy'; 
 import rootes from '@/data/routes'; 
-import { LucideArrowLeft, LucideArrowRight, Search, Circle } from 'lucide-react';
+import { LucideArrowLeft, LucideArrowRight, Search, Circle, BusFront } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
 const BusDetail = ({params}) => {
@@ -30,7 +30,10 @@ const BusDetail = ({params}) => {
           <LucideArrowLeft className='bg-white rounded-full p-1 w-8 h-8'/>
         </div>
         <div className='flex flex-col justify-center align-middle text-white'>
-          <h1 className="text-xl font-bold">Bus Number : {bus.busNumber}</h1>
+          <div className='flex flex-row justify-center '>
+            <BusFront/>
+            <h1 className="text-xl font-bold">{bus.busNumber}</h1>
+          </div>
           <div className='flex flex-row items-center justify-center text-sm'>
             {startStop?.Name} <LucideArrowRight className="mx-2 w-4 h-4"/> {endStop?.Name}
           </div>
