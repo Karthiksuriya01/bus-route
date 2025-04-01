@@ -5,6 +5,8 @@ import busdata from '@/data/dummy';
 import rootes from '@/data/routes'; 
 import { LucideArrowLeft, LucideArrowRight, Search, Circle, BusFront } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import  { DrawerDialogDemo } from '@/components/help';
+import DrawerDialog from '@/components/help';
 
 const BusDetail = ({params}) => {
    const {id} = React.use(params) 
@@ -71,7 +73,9 @@ const BusDetail = ({params}) => {
             })}
           </div>
         </div>
+        <DrawerDialog/>
       </div>
+      
     </div>
   );
 }

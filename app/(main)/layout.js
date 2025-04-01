@@ -9,6 +9,7 @@ export default function MainLayout({ children }) {
       </div>
       <main className="flex-1 mt-15">
         {children}
+        <BottomNav/>
       </main>
       
     </div>
