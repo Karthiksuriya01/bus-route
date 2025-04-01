@@ -7,6 +7,7 @@ import { LucideArrowLeft, LucideArrowRight, Search, Circle, BusFront } from 'luc
 import { useRouter } from 'next/navigation';
 import  { DrawerDialogDemo } from '@/components/help';
 import DrawerDialog from '@/components/help';
+import Link from 'next/link';
 
 const BusDetail = ({params}) => {
    const {id} = React.use(params) 
@@ -22,7 +23,7 @@ const BusDetail = ({params}) => {
   const endStop = rootes.find(route => route.ID === bus.end);
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen">
       {/* Header */}
       <div className='fixed top-0 left-0 right-0 z-50 bg-blue-600 w-full h-20 flex flex-row justify-between align-middle p-5'>
         <div 
@@ -41,7 +42,8 @@ const BusDetail = ({params}) => {
           </div>
         </div>
         <div className='self-center'>
-          <Search className="text-white"/>
+          <Link href={'/search'}>
+          <Search className="text-white"/></Link>
         </div>
       </div>
 
@@ -53,7 +55,7 @@ const BusDetail = ({params}) => {
           <div className="absolute left-2 top-0 w-1 h-full bg-blue-700 z-10" />
           
           {/* Stops */}
-          <div className="space-y-8 mx-0.5">
+          <div className="space-y-8 mx-0.5 mb-5">
             {bus.stops.map((stopId, index) => {
               const stop = rootes.find(route => route.ID === stopId);
               const isFirst = index === 0;
@@ -73,7 +75,6 @@ const BusDetail = ({params}) => {
             })}
           </div>
         </div>
-        <DrawerDialog/>
       </div>
       
     </div>
