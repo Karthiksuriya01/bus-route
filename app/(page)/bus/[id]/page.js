@@ -31,8 +31,8 @@ const BusDetail = ({params}) => {
         >
           <LucideArrowLeft className='bg-white rounded-full p-1 w-8 h-8'/>
         </div>
-        <div className='flex flex-col justify-center align-middle text-white'>
-          <div className='flex flex-row justify-center align-middle gap-2'>
+        <div className='flex flex-col justify-center align-middle text-white gap-1'>
+          <div className='flex flex-row justify-center align-middle gap-2 border-b'>
             <BusFront size={40}/>
             <h1 className="text-4xl font-bold">{bus.busNumber}</h1>
           </div>
