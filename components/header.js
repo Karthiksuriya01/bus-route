@@ -4,7 +4,7 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <header className="fixed w-full flex items-center p-4 shadow-sm z-50 bg-amber-50">
+    <header className="fixed w-full flex items-center p-4 shadow-sm z-50 bg-white">
       <div className="flex items-center rounded-sm border-none shadow-2xl bg-amber-700 overflow-hidden">
         <Image 
           src="/logo.png"

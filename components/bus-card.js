@@ -23,7 +23,7 @@ const BusCard = ({ searchQuery }) => {
           
           return (
             <Link href={`/bus/${encodeURIComponent(bus.busNumber)}`} key={bus.busNumber}>
-              <Card className={'bg-amber-500 flex flex-row justify-between items-center align-middle hover:cursor-pointer my-5'}>
+              <Card className={'bg-blue-500 flex flex-row justify-between items-center align-middle hover:cursor-pointer my-5'}>
                 <CardHeader className={'w-full'}>
                   <CardTitle className={'text-3xl'}>{bus.busNumber}</CardTitle>
                   <CardDescription className={'text-white'}>{start.Name} - {end.Name}</CardDescription>

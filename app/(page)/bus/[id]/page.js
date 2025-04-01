@@ -32,11 +32,11 @@ const BusDetail = ({params}) => {
           <LucideArrowLeft className='bg-white rounded-full p-1 w-8 h-8'/>
         </div>
         <div className='flex flex-col justify-center align-middle text-white'>
-          <div className='flex flex-row justify-center '>
-            <BusFront/>
-            <h1 className="text-xl font-bold">{bus.busNumber}</h1>
+          <div className='flex flex-row justify-center align-middle gap-2'>
+            <BusFront size={40}/>
+            <h1 className="text-4xl font-bold">{bus.busNumber}</h1>
           </div>
-          <div className='flex flex-row items-center justify-center text-sm'>
+          <div className='flex flex-row items-center justify-center text-sm font-extralight'>
             {startStop?.Name} <LucideArrowRight className="mx-2 w-4 h-4"/> {endStop?.Name}
           </div>
         </div>
@@ -61,7 +61,7 @@ const BusDetail = ({params}) => {
               const isLast = index === bus.stops.length - 1;
               
               return (
-                <div key={stopId} className="flex items-center">
+                <div key={stopId} className="flex items-center font-extralight">
                   <Circle 
                     className={`w-4 h-4 z-10 ${isFirst || isLast ? 'text-blue-600' : 'text-gray-400'}`} 
                     fill={isFirst || isLast ? 'currentColor' : 'white'}
