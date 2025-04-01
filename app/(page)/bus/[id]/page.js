@@ -3,11 +3,10 @@
 import React from 'react';
 import busdata from '@/data/dummy'; 
 import rootes from '@/data/routes'; 
-import { LucideArrowLeft, LucideArrowRight, Search, Circle, BusFront } from 'lucide-react';
+import { LucideArrowLeft, LucideArrowRight, Search, Circle, BusFront, HelpCircle, HelpCircleIcon, BadgeHelpIcon, HelpingHandIcon, HelpingHand } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import  { DrawerDialogDemo } from '@/components/help';
-import DrawerDialog from '@/components/help';
 import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 const BusDetail = ({params}) => {
    const {id} = React.use(params) 
@@ -76,8 +75,12 @@ const BusDetail = ({params}) => {
           </div>
         </div>
       </div>
-      
-    </div>
+      <Button 
+        className="fixed right-4 bottom-4 p-6 w-13 bg-blue-600 hover:bg-blue-700 shadow-lg z-50"
+        aria-label="Help"
+      >
+        <HelpCircle />
+      </Button>    </div>
   );
 }
 
