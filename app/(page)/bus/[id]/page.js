@@ -51,7 +51,7 @@ const BusDetail = ({params}) => {
         <h3 className="text-lg font-semibold mb-4">Bus Stops</h3>
         <div className="relative">
           {/* Vertical Line */}
-          <div className="absolute left-2 top-0 w-1 h-full bg-blue-700 z-10" />
+          <div className="absolute left-2 top-0 w-1 h-full rounded-xl bg-blue-700 z-10" />
           
           {/* Stops */}
           <div className="space-y-8 mx-0.5 mb-5">
@@ -76,7 +76,7 @@ const BusDetail = ({params}) => {
         </div>
       </div>
       <Button 
-        className="fixed right-4 bottom-4 p-6 w-13 bg-blue-600 hover:bg-blue-700 shadow-lg z-50"
+        className="fixed right-4 bottom-4 p-6 w-13 bg-blue-600 hover:bg-blue-700 shadow-lg z-50 cursor-pointer"
         aria-label="Help"
       >
         <HelpCircle />
