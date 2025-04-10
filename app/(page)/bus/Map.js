@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react'
 
 // Fix for default markers not showing
 const icon = L.icon({
-  iconUrl: './mark-icon2x.png',
+  iconUrl: '/mark-icon2x.png',
   shadowUrl: '/marker-shadow.png',
   iconSize: [25, 41],
   iconAnchor: [12, 41]
