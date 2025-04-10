@@ -17,7 +17,7 @@ const Header = () => {
         <h1 className='text-3xl font-semibold mx-0.5'>BusMate</h1>
       </div>
       <div>
-      <GeoLocation/>
+      {/* <GeoLocation/> */}
       </div>
     </header>
   );
