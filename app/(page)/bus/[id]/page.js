@@ -7,6 +7,8 @@ import { LucideArrowLeft, LucideArrowRight, Search, Circle, BusFront, HelpCircle
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import Map from '../Map';
+import Page from '../page';
 
 const BusDetail = ({params}) => {
    const {id} = React.use(params) 
@@ -75,6 +77,7 @@ const BusDetail = ({params}) => {
           </div>
         </div>
       </div>
+      <Page/>
       <Button 
         className="fixed right-4 bottom-4 p-6 w-13 bg-blue-600 hover:bg-blue-700 shadow-lg z-50 cursor-pointer"
         aria-label="Help"
